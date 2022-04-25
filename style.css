@@ -1,0 +1,164 @@
+/* -----------------------------------------------------------------zdefiniowane zmienne- */
+:root{
+    --green-kiepscy: rgb(102, 239, 15);
+    --shadow: black;
+    --color-kiepscy-2: rgb(255, 239, 96);
+}
+
+/*----------------------------------------------------------------------dodane czcionki- */
+@font-face {
+    src: url(../Styles/Fonts/Boink\ LET\ Plain.ttf);
+    font-family: Boink;
+}
+
+@font-face {
+    src: url(../Styles/Fonts/AlfaSlabOne-Regular.ttf);
+    font-family: Alfa Slab One;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------------------------------------------------------rozłożenie elementów-*/
+body{
+    background-image: url(./Images/tło.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container{
+    padding: 2% 7%;
+    display: flex;
+    flex-direction: column;
+}
+
+#box{
+    display: flex;
+    justify-content: center;
+}
+
+#box-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 5px 5px 20px;
+}
+
+/* ------------------------------------------------------------stylizowanie znaczników z linkiem-*/
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+/* --------------------------------------------------------------stylizowanie treści tekstowych-*/
+h1{
+    font-family: Boink;
+    color: var(--green-kiepscy);
+    text-shadow:  0 0 0.2em var(--shadow), 0 0 0.2em var(--shadow);
+    text-align: center;
+    font-size:  7vw;
+    grid-column: span 2;  
+}
+
+p{
+    font-family: Alfa Slab One;
+    color: var(--color-kiepscy-2);
+    text-shadow:  0 0 0.2em var(--shadow), 0 0 0.2em var(--shadow);
+    padding: 0.7rem; 
+    text-align: center; 
+    font-size: 1.1em;
+}
+
+/* tekst na stronie głównej */
+.text-user{
+    color: var(--green-kiepscy);
+    align-self: flex-start;
+    text-align: left; 
+    font-style: italic;
+}
+
+.text-response{
+    text-align: right; 
+    align-self: flex-end;
+    max-width: 80%;  
+}
+
+/* komunikat wyświetlany pod przyciskiem na stronie głównej */
+p#message{
+    color: var(--green-kiepscy);
+    font-size: 1em;
+    font-family: Boink;
+    padding: 0px; 
+    visibility: hidden;
+}
+
+/* --------------------------------------------------------------stylizowanie przycisków-*/
+.click{
+    font-family: Alfa Slab One;
+    background: var(--color-kiepscy-2);
+    color: black;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 1rem;
+    border: 0;
+    margin: 10px;
+    transition: all 0.5s;
+    border-radius: 10px;
+    width:fit-content;
+    position: relative;
+    min-width: 200px;
+}
+
+.click:hover {
+    background: var(--green-kiepscy);
+    transition: all 0.5s;
+    box-shadow: 0px 6px 15px var(--shadow); 
+    padding: 1.5rem 2rem; 
+    color: #ffffff; 
+}
+
+/* przyciski z problemami */
+#box-problems{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.click.problem{
+    width: 80vw;
+}
+
+/* -----------------------------------------------------stylizowanie ramki ze zdjęciami-*/
+
+#image{
+    position: relative;
+    width: 80vw;
+    min-width: 250px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#img{
+    width: 95%;
+}
+
+#img-frame{
+    width: 100%;
+    position: absolute;
+}
+
+/* -----------------------------------------------------------stylizowanie odpowiedzi- */
+#answer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
